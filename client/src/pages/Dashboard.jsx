@@ -8,7 +8,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/dashboard`);
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/api/dashboard`);
         const data = await res.json();
         setDonations(data.data || []);
         setLoading(false);
